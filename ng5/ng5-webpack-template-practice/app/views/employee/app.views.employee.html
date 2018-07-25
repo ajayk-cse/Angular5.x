@@ -1,0 +1,5 @@
+ <table class="table table-bordered table-striped">
+    <tr *ngFor="let e of emps" (click)="getselected(e)">
+        <td>{{e.EmpNo}}</td><td>{{e.EmpName}}</td><td>{{e.Salary}}</td>
+    </tr>
+</table>

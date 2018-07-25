@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-scoping",
+      "appliesTo": "scoping.js",
+      "type": "launch"
+    },
+    {
+      "taskName": "task-function",
+      "appliesTo": "function.js",
+      "type": "launch"
+    }
+  ]
+}
