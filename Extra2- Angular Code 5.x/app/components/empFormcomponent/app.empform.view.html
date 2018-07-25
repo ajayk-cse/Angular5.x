@@ -1,0 +1,93 @@
+<div class="container" [hidden]="!isSubmitted">
+    <form name="frmEmp" [formGroup]="frmEmp" novalidate (ngSubmit)="save()">
+        <table class="table table-striped table-bordered">
+            <tr>
+                <td>EmpNo</td>
+                <td>
+                    <input type="text" class="form-control" name="EmpNo" 
+                    formControlName="EmpNo" 
+                        [(ngModel)]="emp.EmpNo">
+                </td>
+                <div class="alert" *ngIf="frmEmp.controls.EmpNo.dirty&&!frmEmp.controls.EmpNo.valid">
+                    <p class="alert alert-danger" *ngIf="frmEmp.controls.EmpNo.errors.required">
+                        EmpNo is Must
+                    </p>
+                    <p class="alert alert-danger" *ngIf="frmEmp.controls.EmpNo.errors.pattern">
+                        EmpNo is Must be digit
+                    </p>
+                    <p class="alert alert-danger" *ngIf="frmEmp.controls.EmpNo.errors.minlength">
+                        EmpNo is Must be min 2 in length
+                    </p>
+                    <p class="alert alert-danger" *ngIf="frmEmp.controls.EmpNo.errors.maxlength">
+                        EmpNo is Must be max 5 in length
+                    </p>
+                </div>
+            </tr>
+            
+            <tr>
+                <td>EmpName</td>
+                <td>
+                    <input type="text" class="form-control" name="EmpName" formControlName="EmpName" [(ngModel)]="emp.EmpName">
+                </td>
+            </tr>
+            <tr>
+                <td>Salary</td>
+                <td>
+                    <input type="text" class="form-control" name="Salary"
+                     formControlName="Salary" [(ngModel)]="emp.Salary">
+                </td>
+                <div class="alert" *ngIf="frmEmp.controls.Salary.dirty&&!frmEmp.controls.Salary.valid">
+                        <p class="alert alert-danger" *ngIf="frmEmp.controls.Salary.errors.required">
+                            Salary is Must
+                        </p>
+                        <p class="alert alert-danger" *ngIf="!frmEmp.controls.Salary.valid">
+                            Salary Must be Positive Value
+                        </p>
+                    </div>
+            </tr>
+            <tr>
+                <td>DeptName</td>
+                <td>
+                    <select class="form-control" name="DeptName" formControlName="DeptName" [(ngModel)]="emp.DeptName">
+                        <option *ngFor="let d of depts" value="{{d}}">{{d}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Designation</td>
+                <td>
+                    <select class="form-control" name="Designation" formControlName="Designation" [(ngModel)]="emp.Designation">
+                        <option *ngFor="let d of desigs" value="{{d}}">{{d}}</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="New" (click)="clear()" class="btn btn-default">
+                </td>
+                <td>
+                    <input type="submit" [disabled]="!frmEmp.valid" value="Save" class="btn btn-success">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="container" [hidden]="isSubmitted">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <td *ngFor="let c of tableColHeaders">{{c}}</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of emps" (click)="getSelectedEmp(e)">
+                <td *ngFor="let c of tableColHeaders">{{e[c]}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="5">
+                <input type="button" value="Load Form" class="btn btn-warning" (click)="loadForm()">
+            </td>
+        </tfoot>
+    </table>
+</div>

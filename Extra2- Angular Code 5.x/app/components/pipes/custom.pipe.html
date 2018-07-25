@@ -1,0 +1,25 @@
+<h3>Custom Pipe DEMO</h3>
+
+<div>
+    <span>Enter Filter Name</span>
+    <div>
+        <input type="text" 
+         #pfilter
+        class="form-control"
+         (keyup)="setVal()"/>
+    </div>
+</div>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Product Id</td>
+            <td>Product Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products | prodfilter:pfilter.value">
+            <td>{{p.prodId}}</td>
+            <td>{{p.prodName}}</td>
+        </tr>
+    </tbody>
+</table>
