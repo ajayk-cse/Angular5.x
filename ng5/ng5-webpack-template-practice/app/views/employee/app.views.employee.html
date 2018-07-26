@@ -1,5 +1,21 @@
- <table class="table table-bordered table-striped">
-    <tr *ngFor="let e of emps" (click)="getselected(e)">
-        <td>{{e.EmpNo}}</td><td>{{e.EmpName}}</td><td>{{e.Salary}}</td>
+
+ <table  class="table table-bordered table-striped" >
+        <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+    <tr *ngFor="let e of emps">
+        <td><span [innerText]="e.EmpNo"></span></td>
+        <td><span [innerText]="e.EmpName"></span></td>
+        <td><span [innerText]="e.Salary"></span></td>
+        <td><button class="btn btn-primary" (click)="getselected(e)">Show Detail</button></td>
     </tr>
 </table>
+
+<div *ngIf="selectedEmployee">
+    <employee-details [employee]="selectedEmployee"></employee-details>
+</div>

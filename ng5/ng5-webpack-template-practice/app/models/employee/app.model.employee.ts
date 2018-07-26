@@ -4,7 +4,8 @@ export class Employee {
         public EmpName:string,
         public Salary:number,
         public DeptName:string,
-        public Designation:string
+        public Designation:string,
+        public Description:string
     ) {}
 }
 
