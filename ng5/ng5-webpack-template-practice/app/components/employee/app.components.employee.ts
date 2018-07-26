@@ -10,10 +10,12 @@ export class EmployeeComponent {
   emp: Employee;
   emps: Array<Employee>;
   selectedEmployee:Employee;
+  title:string;
 
   constructor() {
     this.emp = new Employee(0, "", 0, "", "","");
     this.emps = new Array<Employee>();
+    this.title="Welcome to Synechron Employee Detail Portal";
     
 
     this.emps.push(new Employee(101,"Ajay",12000,"IT","Lead",""));
