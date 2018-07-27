@@ -55,6 +55,8 @@ git push origin branch_name
 
 
 # How to add a file or directory to github once inital repository created and files added
-git commit -m "<message for commit>"
-git push origin master
+1. Remove node_module first
+2. git add .
+3. git commit -m "<message for commit>"
+4. git push origin master
 
