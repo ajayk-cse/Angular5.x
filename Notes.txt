@@ -20,6 +20,8 @@ npm install --save-dev @types/node angular-router-loader angular2-template-loade
 
 npm install --save jquery bootstrap popper.js
 
+npm start 
+
 https://jsonplaceholder.typicode.com/
 
 https://docs.emmet.io/cheat-sheet/
