@@ -13,7 +13,7 @@ import {EventDetailComponent} from "./components/employee/event-details.componet
     exports:[],
     declarations:[AppComponent, EmployeeComponent, EmployeeDetailComponent, EventComponent, EventDetailComponent],
     providers:[],
-    bootstrap:[EmployeeComponent]
+    bootstrap:[EventComponent,EmployeeComponent]
 })
 export class AppModule{ //export keyword is used so that it can register itself for main use
 
