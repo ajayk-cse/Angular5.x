@@ -1,13 +1,14 @@
-//Angular Package
-import '@angular/common';
+//Angular Packages
 import '@angular/core';
-//import '@angular/compiler';
+import '@angular/common';
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
+import '@angular/forms'
+
 import 'rxjs';
 
-// Third party Package [jQuery/BootScript]
-import 'jQuery';
-import 'bootstrap/dist/js/bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'popper.js'
+//Third party Packages [jQuery/Bootstrap..]
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'popper.js';

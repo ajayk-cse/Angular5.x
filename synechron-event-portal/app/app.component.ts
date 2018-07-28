@@ -1,17 +1,13 @@
-import { Component } from "@angular/core"; 
-import { Title } from "../node_modules/@angular/platform-browser";
+import { Component } from "@angular/core";
 
-
- @Component({
-    selector:'my-app',
-    templateUrl: 'app.componet.html'
+@Component({
+    selector: 'my-app',
+    templateUrl: 'app.component.html'
 })
-export class AppComponent{
-    title:string ="Welcome to Synechron Pvt. Ltd. Pune"
-    subTitle:string ="Core Devlopment Pune Devison and Bangalore!!!!!!!!!!";
-
-    changeMyTitle():void{
-            this.title =" Now Welcome to Mumbai Synechron office"
+export class AppComponent {
+    title: string = "Welcome To Synechron Pvt. Ltd.";
+    subTitle: string = "Core Development Centre, Pune!";
+    changeMyTitle(): void {
+        this.title = "Welcome To Pune Synechron Office!";
     }
-
 }
