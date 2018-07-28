@@ -37,3 +37,20 @@ npm install --save @angular/forms@5.2.10
 
 Augury:
 https://augury.angular.io/pages/guides/
+
+https://jsonplaceholder.typicode.com/ --- you can 
+click on resources:
+https://jsonplaceholder.typicode.com/posts
+
+h1[[innerText]=""] ==  <h1 [innerText]=""></h1>
+
+tbody>tr>td[[innerText]=""]*5>span ==
+<tbody>
+    <tr>
+        <td [innerText]=""><span></span></td>
+        <td [innerText]=""><span></span></td>
+        <td [innerText]=""><span></span></td>
+        <td [innerText]=""><span></span></td>
+        <td [innerText]=""><span></span></td>
+    </tr>
+</tbody>
