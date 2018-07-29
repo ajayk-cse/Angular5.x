@@ -143,5 +143,22 @@ MongoDB -- start mongodb server : C:\Program Files\MongoDB\Server\3.4\bin>mongod
 day 4***
 
     Module based seperation done EAGER LOADING
+	
+Navigation module
+----------------
+goto bootswatch.com and then choose any theme -> NavBar -> Copy whole code and remove forms tag in it.
+	
+Routing
+-------
+1. Download the router module
+   npm install --save @angular/router@5.2.10
+2. Register '@anguler/router' in vendor.ts file. Add import in vendor.ts
+3. create new file app.router.ts in app folder only and configure it in module.ts file.
+
+
+
+
+
+
 
 Bootstraps files https://bootswatch.com/
