@@ -4,6 +4,11 @@
 4. mva.microsoft.com
 5. click on Mongodb and Redis caching
 
+a-c and press enter key => for default component
+a-module and press enter key => for default module code
+a-p and press enter key => for default pipe code
+F12 key => is used for go inside the existing code. select the text and press F12
+
 table.table.table-hover.table-stripped>thead>tr>th*5
 
 tbody>tr>td*5>span[[innerText]]
@@ -37,6 +42,12 @@ npm install --save @angular/forms@5.2.10
 
 Augury:
 https://augury.angular.io/pages/guides/
+What is Augury
+Augury is the most used Google Chrome Developer Tool extension for debugging and profiling Angular 2 applications.
+
+Why Use Augury?
+Augury helps Angular 2.0 developers visualize the application through component trees, and visual debugging tools. Developers get immediate insight into their application structure, change detection and performance characteristics.
+
 
 https://jsonplaceholder.typicode.com/ --- you can 
 click on resources:
