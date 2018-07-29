@@ -1,0 +1,32 @@
+<h1 [innerText]="title+employee.employeeName"></h1>
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>EmployeeId</th>
+        <td>{{employee.employeeId}}</td>
+    </tr>
+    <tr>
+        <th>EmployeeName</th>
+        <td>{{employee.employeeName}}</td>
+    </tr>
+    <tr>
+        <th>City</th>
+        <td>{{employee.city}}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{employee.email}}</td>
+    </tr>
+    <tr>
+        <th>Phone</th>
+        <td>{{employee.phone}}</td>
+    </tr>
+    <tr>
+        <th></th>
+        <td>{{employee.avatar}}</td>
+    </tr>
+    <tr>
+        <th>Avatar</th>
+        <td><img [src]="employee.avatar" [alt]="employee.employeeName" [title]="employee.employeeName"></td>
+    </tr>
+</table>

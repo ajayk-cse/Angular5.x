@@ -1,0 +1,127 @@
+<h1 [innerText]="pageTitle"></h1>
+<hr>
+<form class="form-horizontal" [formGroup]="event.eventForm">
+    <fieldset>
+        <div class="form-group">
+            <label for="inputEventId" class="col-lg-2 control-label">Event Id</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="inputEventId" name="inputEventId"  placeholder="Event ID" autofocus formControlName="eventId">
+                <div class="alert alert-danger" *ngIf="event.eventForm.controls['eventId'].hasError('required')">
+                    Please enter Event ID
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventCode" class="col-lg-2 control-label">Event Code</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEventCode" name="inputEventCode" placeholder="Event Code" formControlName="eventCode">
+                <div class="alert alert-danger" *ngIf="event.eventForm.controls['eventCode'].hasError('required')">
+                    Please enter Event Code
+                </div>
+                <div class="alert alert-danger" *ngIf="event.eventForm.controls['eventCode'].hasError('maxlength')">
+                    Event Code must be 5 or less than 5 characters
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventName" class="col-lg-2 control-label">Event Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEventName" name="inputEventName" placeholder="Event Name" formControlName="eventName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventDescription" class="col-lg-2 control-label">Description</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEventDescription" name="inputEventDescription" placeholder="Event Description" formControlName="description">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventStartDate" class="col-lg-2 control-label">Start Date</label>
+            <div class="col-lg-10">
+                <input type="date" class="form-control" id="inputEventStartDate" name="inputEventStartDate" formControlName="startDate">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventEndDate" class="col-lg-2 control-label">End Date</label>
+            <div class="col-lg-10">
+                <input type="date" class="form-control" id="inputEventEndDate" name="inputEventEndDate" formControlName="endDate">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventFees" class="col-lg-2 control-label">Fees</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="inputEventFees" name="inputEventFees" placeholder="Event Fees" formControlName="fees">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputTotalRegistration" class="col-lg-2 control-label">Total Registrations</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="inputTotalRegistration" name="inputTotalRegistration" placeholder="Total Event Registration" formControlName="attendance">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="button" [disabled]="!event.eventForm.valid" (click)="registerNewEvent()" class="btn btn-primary">Register Event</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+<!--<form class="form-horizontal">
+    <fieldset>
+        <div class="form-group">
+            <label for="inputEventId" class="col-lg-2 control-label">Event Id</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="inputEventId" name="inputEventId" [(ngModel)]="event.eventId" placeholder="Event ID" autofocus>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventCode" class="col-lg-2 control-label">Event Code</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEventCode" name="inputEventCode" placeholder="Event Code" [(ngModel)]="event.eventCode">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventName" class="col-lg-2 control-label">Event Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEventName" name="inputEventName" placeholder="Event Name" [(ngModel)]="event.eventName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventDescription" class="col-lg-2 control-label">Description</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputEventDescription" name="inputEventDescription" placeholder="Event Description" [(ngModel)]="event.description">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventStartDate" class="col-lg-2 control-label">Start Date</label>
+            <div class="col-lg-10">
+                <input type="date" class="form-control" id="inputEventStartDate" name="inputEventStartDate"  [(ngModel)]="event.startDate">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventEndDate" class="col-lg-2 control-label">End Date</label>
+            <div class="col-lg-10">
+                <input type="date" class="form-control" id="inputEventEndDate" name="inputEventEndDate"  [(ngModel)]="event.endDate">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEventFees" class="col-lg-2 control-label">Fees</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="inputEventFees" name="inputEventFees" placeholder="Event Fees"  [(ngModel)]="event.fees">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputTotalRegistration" class="col-lg-2 control-label">Total Registrations</label>
+            <div class="col-lg-10">
+                <input type="number" class="form-control" id="inputTotalRegistration" name="inputTotalRegistration" placeholder="Total Event Registration" [(ngModel)]="event.seatsFilled">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="button" (click)="registerNewEvent()" class="btn btn-primary">Register Event</button>
+            </div>
+        </div>
+    </fieldset>
+</form>-->

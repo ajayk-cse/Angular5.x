@@ -1,0 +1,40 @@
+Why Angular?
+
+1) It's a framework [browser/mobile]
+2) It is a modular framework
+3) Performance
+4) Component Architecture
+5) Extending the vocabulary of HTML
+6) SPA [Single Page Application]
+7) Rich data bindings [One-Way [Source-Destination/Destination-Source], Two Way]
+8) Built-in directives
+9) Data transformation [Pipes]
+10) Forms [Template Form/Reactive Forms]
+11) Dynamic [JIT] Compilation / AoT Compilation
+12) Http Module
+13) Rich Animations
+14) Eager Loading VS Lazy Loading
+15) Routing
+16) Language Suuport for Angular Application Development [ES5/ECMA2015/Typescript/Dart]
+17) Karma / Jasmine [Describe It]
+18) Change Detection Cycle [Uni Directional]
+19) Guide Lines
+20) D.I.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
