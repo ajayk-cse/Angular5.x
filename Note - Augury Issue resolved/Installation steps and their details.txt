@@ -1,0 +1,29 @@
+Advantage of Augury:
+- It is the most used google chrome dev tool extension for debugging and profiling angular application. 
+- Component Tree
+- Dev. gets immediate insight into their application structure
+
+
+1. Install "Augury" by Ragel add-on google chrome extension if not installed (check F12 )
+2. Press F12 or ctrl+shift+I in google chrome
+3. click in Dev tools ->  we will see following 
+   Elements Console Source Network Performance Memory >>
+   
+   click here >>
+   
+   you will find Augury link
+4. if any issue comes like below:   Uncaught TypeError: Reflect.getMetadata is not a function
+
+   Solution:-
+	you have to import the type declarations together with the (js) library
+	
+	npm install @types/reflect-metadata --save
+	npm install reflect-metadata --save
+	inside your .ts file: import "reflect-metadata"; // I have added it in main.ts file
+	
+	main.ts
+	-------
+	import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+	import { AppModule } from "./app.module";
+	import "reflect-metadata";
+	platformBrowserDynamic().bootstrapModule(AppModule);

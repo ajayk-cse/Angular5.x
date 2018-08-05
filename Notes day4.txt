@@ -155,7 +155,7 @@ Routing
 2. Register '@anguler/router' in vendor.ts file. Add import in vendor.ts
 3. create new file app.router.ts in app folder only and configure it in module.ts file.
 
-
+https://www.npmjs.com/package/@angular/router
 
 
 

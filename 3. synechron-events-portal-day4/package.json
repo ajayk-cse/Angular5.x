@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --inline --progress --port 3000",
     "build": "rimraf dist & webpack --config ./config/webpack.prod.js"
   },
-  "author": "",
+  "author": "Ajay Kumar",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "^5.2.10",
@@ -17,10 +17,12 @@
     "@angular/platform-browser": "^5.2.10",
     "@angular/platform-browser-dynamic": "^5.2.10",
     "@angular/router": "^5.2.10",
+    "@types/reflect-metadata": "^0.1.0",
     "bootstrap": "^4.1.2",
     "core-js": "^2.5.7",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
+    "reflect-metadata": "^0.1.12",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.26"
   },

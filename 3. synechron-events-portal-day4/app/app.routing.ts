@@ -37,7 +37,7 @@ const appRoutes: Routes = [
     ...empRoute,
     ...eventsRoute,
     ...jphRoute,
-    ...defaultRoute
+    ...defaultRoute // must be at the end and spread it
 ];
 
 export const appRouting: ModuleWithProviders = RouterModule.forRoot(appRoutes);
